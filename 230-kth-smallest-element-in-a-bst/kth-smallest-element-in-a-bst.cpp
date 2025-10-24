@@ -18,7 +18,7 @@ public:
         return ksmallest;
     }
     void inorder(TreeNode* root,int &counter,int k,int &ksmallest){
-        if(!root|| counter>=k)return;
+        if(root==NULL|| counter>=k)return;
         inorder(root->left,counter,k,ksmallest);
         counter++;
         if(counter==k){
