@@ -23,7 +23,7 @@ public:
         return prev;
     }
     ListNode* getKthNode(ListNode* temp,int k){
-        k-=1;
+        k-=1;//as it starts from the 1st node already
         while(temp!=NULL && k>0){
             temp=temp->next;
             k--;
