@@ -27,7 +27,7 @@ public:
             if(temp1)temp1=temp1->next;
             if(temp2)temp2=temp2->next;
         }
-        if(carry>0){
+        if(carry){
             ListNode* newNode=new ListNode(carry);
             cur->next=newNode;
         }
