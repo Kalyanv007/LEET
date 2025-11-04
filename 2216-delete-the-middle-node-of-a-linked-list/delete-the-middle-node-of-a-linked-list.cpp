@@ -20,8 +20,7 @@ public:
             prev=slow;
             slow=slow->next;
         }
-        ListNode* temp=slow->next;
-        prev->next=temp;
+       prev->next=slow->next;
         delete(slow);
         return head;
     }
