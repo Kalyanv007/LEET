@@ -5,7 +5,7 @@ class Solution:
 
         # Base case: dp[0] = 0
         dp[0] = 0
-
+        #building the number of coins needed from 1 to the required amount so that while iterating you can pick from the previously stored dp elements.
         # Loop through all amounts from 1 to amount
         for i in range(1, amount + 1):
             # Try each coin
