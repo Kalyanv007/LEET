@@ -1,17 +1,23 @@
 class Solution:
     def equalPairs(self, grid: List[List[int]]) -> int:
-        col=[]
-        n=len(grid)
-        count=0
-        for i in range(n):
-            cols=[]
-            for j in range(n):
-                cols.append(grid[j][i])
-            col.append(cols)
-        
-        for c in col:
-            for r in grid:
-                if c == r:
-                    count += 1
+        n = len(grid)
+
+        rows = {}
+
+        # Store row frequencies
+        for row in grid:
+            t = tuple(row)
+            rows[t] = rows.get(t, 0) + 1
+
+        count = 0
+
+       
+        for j in range(n):
+            col = []
+
+            for i in range(n):
+                col.append(grid[i][j])
+
+            count += rows.get(tuple(col), 0)
+
         return count
-        
