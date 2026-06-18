@@ -32,5 +32,5 @@ class Solution:
         for i in range(len(s)):
             lastSeen[ord(s[i]) - ord('a')]=i
             if -1 not in lastSeen:
-                count+=(1+min(lastSeen))
+                count+=(1+min(lastSeen)) #checks in backward direction...if any substring ends with the 3 chars it just takes all the elements before it as substrings
         return count
