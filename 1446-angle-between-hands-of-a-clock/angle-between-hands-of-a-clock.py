@@ -1,6 +1,6 @@
 class Solution:
     def angleClock(self, hour: int, minutes: int) -> float:
-        hrAngle = 0.5 * (hour * 60 + minutes)
+        hrAngle = 0.5 * (hour * 60 + minutes) #converting hours to minutes
 
         # Minute hand moves 6 degrees per minute
         minAngle = 6 * minutes
