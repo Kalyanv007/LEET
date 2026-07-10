@@ -18,8 +18,8 @@ class Solution:
 
             for x in range(card, card + groupSize):
 
-                if x not in freq or freq[x] == 0:
-                    return False
+                if x not in freq or freq[x] == 0:   #after building a hashmap of how many elements are there check if a group of the groupsize can be formed from the smallest still remaining element in the map to check for consecutiveness 
+                    return False 
 
                 freq[x] -= 1
 
