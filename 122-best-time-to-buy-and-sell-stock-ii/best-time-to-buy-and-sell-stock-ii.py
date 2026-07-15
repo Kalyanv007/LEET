@@ -11,5 +11,5 @@ class Solution:
                     dp[i][buy]=max(dp[i+1][1]-prices[i],0+dp[i+1][0])
                 else:
                     dp[i][buy]=max(dp[i+1][1]+0,dp[i+1][0]+prices[i])
-        return dp[0][0]
+        return dp[0][0] #in strivers video when you buy value becomes 0 and u cant anymore but here ive taken it like already in possession based where if i can buy then its zero and once bought buy=1 so i cant buy anymore 
         
